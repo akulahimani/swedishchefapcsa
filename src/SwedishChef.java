@@ -1,5 +1,7 @@
-
+import java.util.*;
 public class SwedishChef {
-	main
+	public static void main(String[] args) {
+		
+	}
 	
 }
