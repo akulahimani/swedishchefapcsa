@@ -9,20 +9,14 @@ public class Swedish_Chef {
 		String first3 = " " + scan.nextLine() + " ";
 		String first4 = " " + scan.nextLine() + " ";
 		String first5 = " " + scan.nextLine() + " ";
-//		String first1 = " " + first6;
-//		String first2 = " " + first7;
-//		String first3 = " " + first8;
-//		String first4 = " " + first9;
-//		String first5 = " " + first10;
 		test(first1);
 		test(first2);
 		test(first3);
 		test(first4);
 		test(first5);
 	}
-
 	public static void test(String first) {
-		String end = "";
+		String endString = "";
 		int x = 0;
 		for(int u = first.length(); x < u; x++) {
 			
@@ -32,7 +26,7 @@ public class Swedish_Chef {
 				if(x + 2 < first.length()) {
 					if(first.charAt(x+1) == 'H') {
 						if(first.charAt(x+2) == 'E') {
-							end += "ZEE";
+							endString += "ZEE";
 							x++;
 							x++;
 							y = '*';
@@ -44,7 +38,7 @@ public class Swedish_Chef {
 			if(y== 'A') {//AN to UN #3
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'N') {
-						end += "UN";
+						endString += "UN";
 						x++;
 						y = '*';
 					}
@@ -54,7 +48,7 @@ public class Swedish_Chef {
 			if(y== 'A') {//AU to OO #4
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'U') {
-						end += "OO";
+						endString += "OO";
 						x++;
 						y = '*';
 					}
@@ -64,7 +58,7 @@ public class Swedish_Chef {
 			if(y == 'A') {//A to E #5
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) != ' ') {
-						end += "E";
+						endString += "E";
 						y = '*';
 					}
 				}
@@ -73,7 +67,7 @@ public class Swedish_Chef {
 			if(y == 'O') {//OW to OO #6
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'W') {
-						end += "OO";
+						endString += "OO";
 						x++;
 						y = '*';
 					}
@@ -81,14 +75,14 @@ public class Swedish_Chef {
 			}
 			
 			if(y == 'O') {//O to U #7
-				end += "U";
+				endString += "U";
 				y = '*';
 			}
 			
 			if(y == 'I') {//IR to UR #8
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'R') {
-						end += "UR";
+						endString += "UR";
 						x++;
 						y = '*';
 					}
@@ -100,7 +94,7 @@ public class Swedish_Chef {
 					if(first.charAt(x+1) == 'I') {
 						if(first.charAt(x+2) == 'O') {
 							if(first.charAt(x+3) == 'N') {
-								end += "SHUN";
+								endString += "SHUN";
 								y = '*';
 								x++;
 								x++;
@@ -127,7 +121,7 @@ public class Swedish_Chef {
 							}
 						}
 						if(o == 1) {
-							end += "EE";
+							endString += "EE";
 							y = '*';
 						}
 					}	
@@ -141,7 +135,7 @@ public class Swedish_Chef {
 							x++;
 							x++;
 							y = '*';
-							end += "EE ";
+							endString += "EE ";
 						}
 					}
 				}
@@ -149,13 +143,13 @@ public class Swedish_Chef {
 			
 			if(y == 'F') {//F to FF #12
 				y = '*';
-				end += "FF";	
+				endString += "FF";	
 			}
 			
 			if(y == 'E') {//E with E-A and end of word #13
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == ' ') {
-						end += "E-A ";
+						endString += "E-A ";
 						x++;
 						y = '*';
 					}
@@ -165,30 +159,30 @@ public class Swedish_Chef {
 			if(y == 'U') {//U to OO except at start of word  #14
 				if(x-1 != -1) {
 					if(first.charAt(x-1) != ' ') {
-						end += "OO";
+						endString += "OO";
 						y = '*';
 					}
 				}
 			}
 			
 			if(y == 'V') {//V with F #15
-				end += "F";
+				endString += "F";
 				y = '*';
 			}
 			
 			if(y == 'W') {//W with V #16
-				end += "V";
+				endString += "V";
 				y = '*';
 			}
 			
 			if(y != '*') {
-				end += y;
+				endString += y;
 			}
 		}
 		//System.out.println(end + ". Bork Bork Bork!");//print and #1 at one time
 		int y = 1;
-		for(int t = end.length()-1; y < t; y++) {
-			System.out.print(end.charAt(y));
+		for(int t = endString.length()-1; y < t; y++) {
+			System.out.print(endString.charAt(y));
 		}
 		System.out.println(". BORK BORK BORK!");
 	}
