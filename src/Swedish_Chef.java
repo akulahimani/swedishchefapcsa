@@ -168,12 +168,10 @@ public class Swedish_Chef {
 				endString += "F";
 				y = '*';
 			}
-			
 			if(y == 'W') {//W with V #16
 				endString += "V";
 				y = '*';
 			}
-			
 			if(y != '*') {
 				endString += y;
 			}
