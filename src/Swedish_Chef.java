@@ -54,7 +54,6 @@ public class Swedish_Chef {
 					}
 				}
 			}
-			
 			if(y == 'A') {//A to E #5
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) != ' ') {
