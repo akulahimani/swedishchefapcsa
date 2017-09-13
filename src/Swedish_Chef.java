@@ -163,7 +163,6 @@ public class Swedish_Chef {
 					}
 				}
 			}
-			
 			if(y == 'V') {//V with F #15
 				endString += "F";
 				y = '*';
