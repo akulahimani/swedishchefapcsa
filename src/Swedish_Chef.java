@@ -178,7 +178,6 @@ public class Swedish_Chef {
 				endString += y;
 			}
 		}
-		//System.out.println(end + ". Bork Bork Bork!");//print and #1 at one time
 		int y = 1;
 		for(int t = endString.length()-1; y < t; y++) {
 			System.out.print(endString.charAt(y));
