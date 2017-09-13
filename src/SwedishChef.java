@@ -22,6 +22,38 @@ public class SwedishChef {
 			char y = first.charAt(x);
 			
 			
+			if(y == 'T') {//THE to ZEEE #2
+				if(x + 2 < first.length()) {
+					if(first.charAt(x+1) == 'H') {
+						if(first.charAt(x+2) == 'E') {
+							endString += "ZEE";
+							x++;
+							x++;
+							y = '*';
+						}
+					}
+				}
+			}
+			
+			if(y== 'A') {//AN to UN #3
+				if(x + 1 < first.length()) {
+					if(first.charAt(x+1) == 'N') {
+						endString += "UN";
+						x++;
+						y = '*';
+					}
+				}
+			}
+			
+			if(y== 'A') {//AU to OO #4
+				if(x + 1 < first.length()) {
+					if(first.charAt(x+1) == 'U') {
+						endString += "OO";
+						x++;
+						y = '*';
+					}
+				}
+			}
 			
 			if(y == 'A') {//A to E #5
 				if(x + 1 < first.length()) {
