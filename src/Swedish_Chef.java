@@ -22,7 +22,7 @@ public class Swedish_Chef {
 			
 			char y = first.charAt(x);
 			
-			if(y == 'T') {//THE to ZEEE #2
+			if(y == 'T') {//THE to ZEE #2
 				if(x + 2 < first.length()) {
 					if(first.charAt(x+1) == 'H') {
 						if(first.charAt(x+2) == 'E') {
