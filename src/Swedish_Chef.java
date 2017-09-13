@@ -1,7 +1,7 @@
 import java.util.*;
 public class Swedish_Chef {
-
 	public static void main(String[] args) {
+		//Sean
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Type input:");
 		String first1 = " " + scan.nextLine() + " ";
@@ -22,7 +22,7 @@ public class Swedish_Chef {
 			
 			char y = first.charAt(x);
 			
-			if(y == 'T') {//THE to ZEE #2
+			if(y == 'T') {//THE to ZEE #2 -Himani
 				if(x + 2 < first.length()) {
 					if(first.charAt(x+1) == 'H') {
 						if(first.charAt(x+2) == 'E') {
@@ -32,43 +32,43 @@ public class Swedish_Chef {
 						}
 					}
 				}
-			}else if(y== 'A') {//AN to UN #3
+			}else if(y== 'A') {//AN to UN #3 -Himani
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'N') {
 						endString += "UN";
 						x++;
 					}
 				}
-			}else if(y== 'A') {//AU to OO #4
+			}else if(y== 'A') {//AU to OO #4 -Himani
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'U') {
 						endString += "OO";
 						x++;
 					}
 				}
-			}else if(y == 'A') {//A to E #5
+			}else if(y == 'A') {//A to E #5 -Sean
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) != ' ') {
 						endString += "E";
 					}
 				}
-			}else if(y == 'O') {//OW to OO #6
+			}else if(y == 'O') {//OW to OO #6-Amita
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'W') {
 						endString += "OO";
 						x++;
 					}
 				}
-			}else if(y == 'O') {//O to U #7
+			}else if(y == 'O') {//O to U #7 -Quinlan
 				endString += "U";
-			}else if(y == 'I') {//IR to UR #8
+			}else if(y == 'I') {//IR to UR #8 -Amita
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'R') {
 						endString += "UR";
 						x++;
 					}
 				}
-			}else if(y == 'T') {//TION to SHUN #9
+			}else if(y == 'T') {//TION to SHUN #9 -Amita
 				if(x + 3 < first.length()) {
 					if(first.charAt(x+1) == 'I') {
 						if(first.charAt(x+2) == 'O') {
@@ -81,7 +81,7 @@ public class Swedish_Chef {
 						}
 					}
 				}
-			}else if(y == 'I') {//I to EE if first I in word #10 but not at Start of word
+			}else if(y == 'I') {//I to EE if first I in word #10 but not at Start of word -Sean
 				if(x-1 == -1) {
 				}else {
 					if(first.charAt(x-1) != ' ') {
@@ -101,7 +101,7 @@ public class Swedish_Chef {
 						}
 					}	
 				}
-			}else if(y == 'E') {//EN to EE at end of word #11
+			}else if(y == 'E') {//EN to EE at end of word #11 -Sean
 				if(x + 2 < first.length()) {
 					if(first.charAt(x+1) == 'N') {
 						if(first.charAt(x+2) == ' ') {
@@ -111,24 +111,24 @@ public class Swedish_Chef {
 						}
 					}
 				}
-			}else if(y == 'F') {//F to FF #12
+			}else if(y == 'F') {//F to FF #12 -Coco
 				endString += "FF";	
-			}else if(y == 'E') {//E with E-A and end of word #13
+			}else if(y == 'E') {//E with E-A and end of word #13 -Coco
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == ' ') {
 						endString += "E-A ";
 						x++;
 					}
 				}
-			}else if(y == 'U') {//U to OO except at start of word  #14
+			}else if(y == 'U') {//U to OO except at start of word  #14 -Sean
 				if(x-1 != -1) {
 					if(first.charAt(x-1) != ' ') {
 						endString += "OO";
 					}
 				}
-			}else if(y == 'V') {//V with F #15
+			}else if(y == 'V') {//V with F #15 -Quinlan
 				endString += "F";
-			}else if(y == 'W') {//W with V #16
+			}else if(y == 'W') {//W with V #16 -Coco
 				endString += "V";
 			}else{
 				endString += y;
@@ -138,6 +138,6 @@ public class Swedish_Chef {
 		for(int t = endString.length()-1; y < t; y++) {
 			System.out.print(endString.charAt(y));
 		}
-		System.out.println(". BORK BORK BORK!");
+		System.out.println(". BORK BORK BORK!"); //-Quinlan
 	}
 }
