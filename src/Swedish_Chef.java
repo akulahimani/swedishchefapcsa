@@ -29,46 +29,60 @@ public class Swedish_Chef {
 							endString += "ZEE";
 							x++;
 							x++;
+							y = '*';
 						}
 					}
 				}
-			}else if(y== 'A') {//AN to UN #3 -Himani
+			}
+			if(y== 'A') {//AN to UN #3 -Himani
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'N') {
 						endString += "UN";
 						x++;
+						y = '*';
 					}
 				}
-			}else if(y== 'A') {//AU to OO #4 -Himani
+			}
+			if(y== 'A') {//AU to OO #4 -Himani
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'U') {
 						endString += "OO";
 						x++;
+						y = '*';
 					}
 				}
-			}else if(y == 'A') {//A to E #5 -Sean
+			}
+			if(y == 'A') {//A to E #5 -Sean
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) != ' ') {
 						endString += "E";
+						y = '*';
 					}
 				}
-			}else if(y == 'O') {//OW to OO #6-Amita
+			}
+			if(y == 'O') {//OW to OO #6-Amita
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'W') {
 						endString += "OO";
 						x++;
+						y = '*';
 					}
 				}
-			}else if(y == 'O') {//O to U #7 -Quinlan
+			}
+			if(y == 'O') {//O to U #7 -Quinlan
 				endString += "U";
-			}else if(y == 'I') {//IR to UR #8 -Amita
+				y = '*';
+			}
+			if(y == 'I') {//IR to UR #8 -Amita
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == 'R') {
 						endString += "UR";
 						x++;
+						y = '*';
 					}
 				}
-			}else if(y == 'T') {//TION to SHUN #9 -Amita
+			}
+			if(y == 'T') {//TION to SHUN #9 -Amita
 				if(x + 3 < first.length()) {
 					if(first.charAt(x+1) == 'I') {
 						if(first.charAt(x+2) == 'O') {
@@ -77,11 +91,13 @@ public class Swedish_Chef {
 								x++;
 								x++;
 								x++;
+								y = '*';
 							}
 						}
 					}
 				}
-			}else if(y == 'I') {//I to EE if first I in word #10 but not at Start of word -Sean
+			}
+			if(y == 'I') {//I to EE if first I in word #10 but not at Start of word -Sean
 				if(x-1 == -1) {
 				}else {
 					if(first.charAt(x-1) != ' ') {
@@ -90,47 +106,62 @@ public class Swedish_Chef {
 						while(o == 0) {
 							if(first.charAt(x - xx) == 'I') {
 								o = 2;
-							}else if(first.charAt(x - xx) == ' '){
+							}if(first.charAt(x - xx) == ' '){
 								o = 1;
 							}else {
 								xx++;
+								
 							}
 						}
 						if(o == 1) {
 							endString += "EE";
+							y = '*';
 						}
 					}	
 				}
-			}else if(y == 'E') {//EN to EE at end of word #11 -Sean
+			}
+			if(y == 'E') {//EN to EE at end of word #11 -Sean
 				if(x + 2 < first.length()) {
 					if(first.charAt(x+1) == 'N') {
 						if(first.charAt(x+2) == ' ') {
 							x++;
 							x++;
+							y = '*';
 							endString += "EE ";
 						}
 					}
 				}
-			}else if(y == 'F') {//F to FF #12 -Coco
+			}
+			if(y == 'F') {//F to FF #12 -Coco
 				endString += "FF";	
-			}else if(y == 'E') {//E with E-A and end of word #13 -Coco
+				y = '*';
+			}
+			if(y == 'E') {//E with E-A and end of word #13 -Coco
 				if(x + 1 < first.length()) {
 					if(first.charAt(x+1) == ' ') {
 						endString += "E-A ";
 						x++;
+						y = '*';
 					}
 				}
-			}else if(y == 'U') {//U to OO except at start of word  #14 -Sean
+			}
+			if(y == 'U') {//U to OO except at start of word  #14 -Sean
 				if(x-1 != -1) {
 					if(first.charAt(x-1) != ' ') {
 						endString += "OO";
+						y = '*';
 					}
 				}
-			}else if(y == 'V') {//V with F #15 -Quinlan
+			}
+			if(y == 'V') {//V with F #15 -Quinlan
 				endString += "F";
-			}else if(y == 'W') {//W with V #16 -Coco
+				y = '*';
+			}
+			if(y == 'W') {//W with V #16 -Coco
 				endString += "V";
-			}else{
+				y = '*';
+			}
+			if(y != '*'){
 				endString += y;
 			}
 		}
